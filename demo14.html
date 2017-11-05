@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      class People {
+        constructor(name,age){
+          this.__name = name;
+          this.__age = age;
+        }
+
+        getName(){
+          return this.__name;
+        }
+
+        //静态方法
+        static getAge(){
+          console.log('age');
+        }
+
+      }
+
+      let xiaoming = new People('xiaoming',12);
+      console.log(xiaoming);
+      let n = xiaoming.getName();
+      console.log(n);
+
+      //类方法
+      People.getAge();
+
+
+      //*继承
+      class Chengxuyuan extends People {
+        constructor(name,age,salary) {
+          super(name,age);
+        }
+
+        getAge(){
+          console.log(this.age);
+        }
+
+      }
+
+
+      let xiaohui = new Chengxuyuan('xiaohui',22);
+      console.log(xiaohui.getName());
+
+    </script>
+  </body>
+</html>

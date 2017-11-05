@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      let obj1 = {
+        getA(){
+          return 'a';
+        }
+      }
+
+      let obj2 = {
+        getA(){
+          return 'b';
+        }
+      }
+
+      let c = {
+        __proto__: obj2,
+        getA(){
+          return 'c'
+        },
+        getB(){
+          return super.getA();
+        }
+      }
+
+      console.log(c.getA());
+      console.log(c.getB());
+
+    </script>
+  </body>
+</html>

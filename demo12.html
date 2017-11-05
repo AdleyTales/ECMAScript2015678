@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      let obj1 = {
+        getA(){
+          return 'a';
+        },
+        a:1000
+      }
+
+      let obj2 = {
+        getB(){
+          return 'b';
+        }
+      }
+
+      // let c = Object.create(obj1);
+      //
+      // console.log(c.getA()); //a
+      // console.log(Object.getPrototypeOf(c)); //obj1
+      //
+      // Object.setPrototypeOf(c,obj2);
+      // console.log(c.getB());
+      // console.log(Object.getPrototypeOf(c)); //obj2
+
+      // __proto__
+      let c = {
+        __proto__:obj1
+      }
+      console.log(c.getA()); //a
+      console.log(Object.getPrototypeOf(c)); //obj1
+
+      
+    </script>
+  </body>
+</html>
