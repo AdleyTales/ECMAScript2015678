@@ -63,21 +63,6 @@
   console.log(breakfast2);
 ```
 
-### 模板字符串：
-
-```js
-  var eating = 'cake',
-      drink = 'milk';
-
-  //传统拼接字符串
-  var breakfast = '今天早上吃的是:' + eating + ',喝的是：' + drink;
-  console.log(breakfast);
-
-  //es6模板字符串
-  var breakfast2 = `今天早上吃的是：${eating},喝的是：${drink}`;
-  console.log(breakfast2);
-```
-
 ### 默认参数：
 
 ```js
